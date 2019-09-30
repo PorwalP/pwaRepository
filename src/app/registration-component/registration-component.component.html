@@ -1,0 +1,59 @@
+<!-- <p>registration-component works!</p> -->
+<div fxLayout="row" fxLayoutAlign="center center" class="login-main">
+
+<mat-card class="my-card">
+        <mat-card-header>
+                  <mat-card-title>Registration</mat-card-title>
+                </mat-card-header>
+    <mat-card-content fxLayout="column">
+        <!-- form Data -->
+        <form class="my-form">
+            <mat-form-field class="full-width">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="First name" name="fname" required>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Last name" name="lname" required>
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <mat-label>Address</mat-label>
+                <input matInput placeholder="Address" name="address" required>
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" name="email">
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password" name="passwordValue">
+            </mat-form-field>
+
+            <section class="example-section">
+                <label class="example-margin">Gender: </label>
+                <!-- <mat-radio-group [(ngModel)]="gender"> -->
+                        <mat-radio-group>
+                    <mat-radio-button class="example-margin" value="after">Male</mat-radio-button>
+                    <mat-radio-button class="example-margin" value="before">Female</mat-radio-button>
+                    <mat-radio-button class="example-margin" value="before">Other</mat-radio-button>
+                </mat-radio-group>
+            </section>
+
+            <mat-form-field>
+                <mat-label>Date of Birth</mat-label>
+                <!-- <input matInput [matDatePicker]="picker" placeholder="Choose a date"> -->
+                <input matInput placeholder="Choose a date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <!-- Registration button action -->
+        <button mat-raised-button  color="primary">REGISTER</button>
+    </mat-card-actions>
+</mat-card>
+</div>

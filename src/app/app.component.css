@@ -1,0 +1,9 @@
+.spacer {
+    flex: 1 1 auto;
+}
+.fullWidth {
+    width: 100%;
+}
+.toolbar-fullscreen {
+    display: none;
+}
