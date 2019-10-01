@@ -9,7 +9,7 @@
         <a mat-button routerLink="/login">LOGIN</a>
         <a mat-button routerLink="/login">ABOUT</a>
         <a mat-button routerLink="/login">DASHBOARD</a>
-        <a mat-button routerLink="/login">Test1</a>
+        <a mat-button routerLink="/contact">CONTACT</a>
      
        
       </div>
@@ -31,16 +31,14 @@
           <span class="title" md-line>ABOUT</span></a>
         <a mat-list-item routerLink="/login" (click)="sidenav.toggle()">
           <span class="title" md-line>DASHBOARD</span></a>
-        <a mat-list-item routerLink="/login" (click)="sidenav.toggle()">
-          <span class="title" md-line>Test1</span></a>
+        <a mat-list-item routerLink="/contact" (click)="sidenav.toggle()">
+          <span class="title" md-line>CONTACT</span></a>
+          
        
-        <!-- <a mat-list-item routerLink="/login" (click)="sidenav.toggle()">
-          <span class="title" md-line>Test3</span></a> -->
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
       <div style="height: 88vh;">
-
         <router-outlet></router-outlet>
       </div>
     </mat-sidenav-content>

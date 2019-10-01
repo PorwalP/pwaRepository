@@ -14,28 +14,32 @@ import { environment } from '../environments/environment';
 import { WINDOW_PROVIDERS } from 'WindowProvider';
 
 import { PushNotificationService } from './push-notification.service';
-import  { HttpClientModule } from '@angular/common/http'
-// import { MatContactsModule } from '@angular-material-extensions/contacts';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularPageVisibilityModule } from 'angular-page-visibility';
+import { NgxPermissionsModule } from 'ngx-permissions'
+
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponentComponent,
-    LoginComponentComponent
-  ],
+    LoginComponentComponent,
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MyMaterialModule,
     HttpClientModule,
+    AngularPageVisibilityModule,
     RouterModule.forRoot([
-      {path:'', redirectTo:'/', pathMatch:'full'},
-      {path:'register', component:RegistrationComponentComponent},
-      {path:'login', component:LoginComponentComponent},
+      { path: '', redirectTo: '/', pathMatch: 'full' },
+      { path: 'register', component: RegistrationComponentComponent },
+      { path: 'login', component: LoginComponentComponent },
     ]),
     FlexLayoutModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-   
+    NgxPermissionsModule.forRoot(),
+
   ],
   providers: [WINDOW_PROVIDERS],
   bootstrap: [AppComponent]
